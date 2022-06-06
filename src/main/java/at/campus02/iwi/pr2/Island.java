@@ -22,7 +22,7 @@ public class Island {
         // ovdje se dodaje povrsina facility-a na ukupnu povrsinu
         this.facilityArea = this.facilityArea + f.area;
     }
-
+//ovako naci najvecu vrijednost u arrayList
     public Facility findHighestProfit() {
         Facility fac = facilities.get(0);
 
@@ -34,10 +34,10 @@ public class Island {
 
         return fac;
     }
-
+//hashmap ovako upisujmo ako je metoda bez parametara
     public HashMap<String, Integer> groupFacilities() {
         HashMap<String, Integer> group = new HashMap<String, Integer>();
-
+//pomocne varijable koristimo kao brojace, inkrement broji 
         int low = 0;
         int average = 0;
         int high = 0;
@@ -51,7 +51,7 @@ public class Island {
                 high++;
             }
         }
-
+//upisati u hashmap
         group.put("Low", low);
         group.put("Average", average);
         group.put("High", high);
@@ -79,6 +79,7 @@ public class Island {
         return ergebnis;
     }
 
+    //SORTIRANJE ARRAYLIST, printanje sortiranog niza 
     public void sortedPrint(){
         Collections.sort(facilities, new IslandComparator());
         for ( Facility f: facilities) {
